@@ -1,25 +1,33 @@
+
+
+let userScore = 0;
+let computerScore = 0;
+
+const userScore_span = document.getElementById("user-score");
+const computerScore_span = document.getElementById("computer-score");
+
+const rock = document.querySelector(".rock")
+const paper = document.querySelector(".paper");
+const scissors = document.querySelector(".scissors");
+const lizard = document.querySelector(".lizard");
+const spock = document.querySelector(".spock");
+
 // function that returns rock, paper, scissors, Lizzard, Spock as randomly as possible
 function rockPapperScissors (){
   let choiceNumber = Math.ceil(Math.random() * 5 );
       if (choiceNumber === 1) {
       return "rock";
       } else if (choiceNumber === 2){
-        return "Paper";
+        return "paper";
       } else if (choiceNumber === 3) {
         return "scissors";
       } else if (choiceNumber === 4) {
-        return "Lizzard";
+        return "lizard";
       } else {
-        return "Spock";
+        return "spock";
       }
 } 
 
-
-const rock = document.querySelector(".rock")
-const paper = document.querySelector(".paper");
-const scissors = document.querySelector(".scissors");
-const lizzard = document.querySelector(".lizzard");
-const spock = document.querySelector(".spock");
 
 rock.addEventListener("click", function(){
   let player = "rock";
@@ -36,8 +44,8 @@ scissors.addEventListener("click", function() {
   didYouWin(player);
 });
 
-lizzard.addEventListener("click", function() {
-  let player = "lizzard";
+lizard.addEventListener("click", function() {
+  let player = "lizard";
   didYouWin(player);
 });
 
@@ -61,13 +69,22 @@ function didYouWin(player) {
           (player === "spock" && computer === "rock") ||
           (player === "rock" && computer === "scissors")){
         console.log("you win");
-        document.querySelector(".userPoint" + 1);
+        youWin();
+       
       } else if (player === computer  ) {
         console.log("its a tie");
       } else {
         console.log("you loose");
+        computerWin()
       }
     }
 
-    
-    
+  function youWin() {
+    userScore++;
+    userScore_span.innerHTML = userScore;
+  }
+
+  function computerWin() {
+    computerScore++;
+    computerScore_span.innerHTML = computerScore;
+  }
