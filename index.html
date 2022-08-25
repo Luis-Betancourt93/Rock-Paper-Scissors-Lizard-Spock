@@ -4,15 +4,43 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Poppins:wght@200;400&family=Roboto:wght@700&family=Sacramento&display=swap" rel="stylesheet">
   <title>Lizard Spock Game</title>
 </head>
 <body>
-  <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
-  <img class="backgroundImg" src="img/Big Bang.jpeg" alt="">
+  <!-- <h1>Rock, Paper, Scissors, Lizard, Spock</h1> -->
 
+  
+   
+    <img class="backgroundImg" src="img/Big Bang.jpeg" alt="">
 
+    <div class="overlay"></div>
 
+    <div class="score">
 
+      <div class="userScore">
+        <h2>Player:</h2>
+        <p class="userPoints">0</p>
+      </div>
+
+      <div class="computerScore">
+        <h2>Computer:</h2>
+        <p class="computerPoints">0</p>
+      </div>
+
+    </div>
+
+    <div class="options">
+      <button class="rock">Rock</button>
+      <button class="paper">Paper</button>
+      <button class="scissors">Scissors</button>
+      <button class="lizzard">Lizzard</button>
+      <button class="spock">Spock</button>
+    </div>
 
 
   <script src="preview.js"></script>
